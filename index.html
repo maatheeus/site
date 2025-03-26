@@ -501,6 +501,26 @@
     <div id="myDiv" onclick="gtag('event', 'conversion', {'send_to': 'AW-16829798482/7RGlCJqn-owaENKwidk-'});">
 
     </div>
+
+    <div class="modal fade" id="promoModal" tabindex="-1" aria-labelledby="promoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center shadow-lg rounded-4 overflow-hidden">
+                <div class="modal-header bg-danger text-white d-flex justify-content-center">
+                    <h5 class="modal-title fw-bold" id="promoModalLabel" style="color: #FFFFFF">🔥 Oferta Imperdível! 🔥</h5>
+                    <button type="button" class="btn-close position-absolute end-0 me-3" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body py-4">
+                    <h4 class="text-danger fw-bold">Faça seu consórcio agora!</h4>
+                    <p class="fs-5 text-dark">E ganhe um <span class="fw-bold text-success">capacete grátis!</span> 🏍️</p>
+                    <a href="https://api.whatsapp.com/send?phone=558699578630&text=Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20o%20consorcio%20para%20ganhar%20meu%20capacete%20gratis" 
+                       class="btn btn-success btn-lg mt-3 fw-bold px-4 py-2 shadow-sm"
+                       onclick="gtag('event', 'conversion', {'send_to': 'AW-16829798482/7RGlCJqn-owaENKwidk-'});">
+                        📲 Chamar no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!-- Footer End -->
 
@@ -522,6 +542,13 @@
     <script src="js/main.js"></script>
     <script type="text/javascript" src="js/floating-wpp.min.js"></script>
     <script type="text/javascript">
+
+        document.addEventListener("DOMContentLoaded", function() {
+     
+                var promoModal = new bootstrap.Modal(document.getElementById('promoModal'));
+                promoModal.show();       
+        });
+
         $(document).ready(function() {
             $('#myDiv').floatingWhatsApp({
                 phone: '558699578630',
